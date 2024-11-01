@@ -1,0 +1,217 @@
+{
+    "name" : "PancakeSwap",
+    "appid" : "__UNI__G8C3C5D2",
+    "description" : "PancakeSwap",
+    "versionName" : "0.8.0",
+    "versionCode" : 80,
+    "transformPx" : false,
+    "app-plus" : {
+        // APP-VUE分包，可提APP升启动速度，2.7.12开始支持，兼容微信小程序分包方案，默认关闭
+        "optimization" : {
+            "subPackages" : true
+        },
+        "safearea" : {
+            "bottom" : {
+                "offset" : "none"
+            }
+        },
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "modules" : {
+            "VideoPlayer" : {}
+        },
+        "distribute" : {
+            "android" : {
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ],
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a" ],
+                "minSdkVersion" : 26,
+                "targetSdkVersion" : 30
+            },
+            "ios" : {},
+            "sdkConfigs" : {
+                "ad" : {}
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "",
+                    "xhdpi" : "",
+                    "xxhdpi" : "",
+                    "xxxhdpi" : ""
+                },
+                "ios" : {
+                    "appstore" : "",
+                    "ipad" : {
+                        "app" : "",
+                        "app@2x" : "",
+                        "notification" : "",
+                        "notification@2x" : "",
+                        "proapp@2x" : "",
+                        "settings" : "",
+                        "settings@2x" : "",
+                        "spotlight" : "",
+                        "spotlight@2x" : ""
+                    },
+                    "iphone" : {
+                        "app@2x" : "",
+                        "app@3x" : "",
+                        "notification@2x" : "",
+                        "notification@3x" : "",
+                        "settings@2x" : "",
+                        "settings@3x" : "",
+                        "spotlight@2x" : "",
+                        "spotlight@3x" : ""
+                    }
+                }
+            }
+        }
+    },
+    "quickapp" : {},
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : true,
+            "es6" : false,
+            "minified" : true,
+            "postcss" : true
+        },
+        "optimization" : {
+            "subPackages" : true
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true,
+        "component2" : true
+    },
+    "mp-qq" : {
+        "optimization" : {
+            "subPackages" : true
+        },
+        "appid" : ""
+    },
+    "mp-baidu" : {
+        "usingComponents" : true,
+        "appid" : ""
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true,
+        "appid" : ""
+    },
+    "h5" : {
+        "template" : "template.h5.html",
+        "router" : {
+            "mode" : "hash",
+            "base" : "/web/"
+        },
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : true
+            }
+        },
+        "title" : "PancakeSwap",
+        "sdkConfigs" : {
+            "maps" : {}
+        },
+        "devServer" : {
+            "https" : {
+                "cert" : "-----BEGIN CERTIFICATE-----
+MIIE7zCCA1egAwIBAgIQXuAH73olHV6kzMi+gi1bDTANBgkqhkiG9w0BAQsFADCB
+ljELMAkGA1UEBhMCVVMxEzARBgNVBAgMCkNhbGlmb3JuaWExEjAQBgNVBAcMCVNh
+biBNYXRlbzEUMBIGA1UECgwLYm9vbHZwcy5jb20xEDAOBgNVBAsMB2Jvb2x2cHMx
+FDASBgNVBAMMC2Jvb2x2cHMuY29tMSAwHgYJKoZIhvcNAQkBFhFhZG1pbkBib29s
+dnBzLmNvbTAeFw0yNDA0MjQwMzM5NTZaFw0yNjA3MjQwMzM5NTZaMGkxJzAlBgNV
+BAoTHm1rY2VydCBkZXZlbG9wbWVudCBjZXJ0aWZpY2F0ZTE+MDwGA1UECww1Y29k
+ZW1pcmFjbGVAQ29kZW1pcmFjbGVkZWlNYWMtUHJvLmxvY2FsIChDb2RlbWlyYWNs
+ZSkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCtN68pjmdv8MYPgYfc
+sMTJSBN6I20JekZujF2zvclR4WKMP+ex5gd5lIcbiR6j/z+w43G+4kggNX7YDp6b
+EfWJAC8m1omtTM1Wpxtd2OjS/lT6ZCuCpHxghadxM/+lKjuUEk1FgUKPzbAl789K
+W0ml5Lv2G6nYIzE7ClfwZDu4KjRwYSmHlw/obUFSqtTtP3AoiZbso3u/fpEfJRwY
+N0AHTHRe9zIUJuRTfYs6h7vy9BRAK839o76Cd3C94Oaw2MlDalNHAj5kJHJjH3cD
+gA4MLwCAjzezUcsLOQMii2v19jzRE16Kvkcxfhqwuz9/nFt6Kea7NsQNCCEk0o/Q
+hnnrAgMBAAGjgeQwgeEwDgYDVR0PAQH/BAQDAgWgMBMGA1UdJQQMMAoGCCsGAQUF
+BwMBMB8GA1UdIwQYMBaAFEDyqfFKpvs2nrVlxj5pRNUeQlwqMIGYBgNVHREEgZAw
+gY2CCWxvY2FsaG9zdIILZXhhbXBsZS5jb22CDSouZXhhbXBsZS5vcmeCC2V4YW1w
+bGUub3Jngg0qLmV4YW1wbGUuY29tggh0ZXN0LmNvbYIIdGVzdC5vcmeCCioudGVz
+dC5vcmeCCioudGVzdC5jb22HBH8AAAGHEAAAAAAAAAAAAAAAAAAAAAGHBApjZAow
+DQYJKoZIhvcNAQELBQADggGBAIcptlp1Qxv/yyKxCPG2kT/MPep7sjQ/lJZ3lk8l
+qTytTALL31fIYvi8CE+bqKyPfIew2BVcvW9NpTGNF9fsOCKiDgHzIPTqkgPHDzr3
+cIOQWvyviS1GDH/EAa/yrmUy/l957wGE+5iqodCzzVrHMPaRSP3WYe/Ghd1JRks2
+ztWi1orLLpnGmVP/kDg0lhrB/pJs6KuLbXvEmf9To5vYIdkUbx+NU+xSNCIiMV1k
+rSrmtCZRZYySmEkZaCe9Vfjw0/7Y95fetpIzInM58ox7cwjX55ceDcEWp9ooytT7
+vobts22eKyYTb55DzCLtglUFvUlF8H5x2EKwzexDsttC2b8ObuNsEElays5S8Dyk
+TS+U+L5RUnyrYpBAGu0Ry4alEyaDm4cxwnHTQDkZDyiG531gmfRdCMC9ItY/I0NW
+y9IE2+n/JEEAj+DJP2ZkhUvahHb9dBQ/KGgk14kjcoRue3lmDU7mm/1qrxcOFTpL
+/SnwHjkgb1dafW3ULkWm2zv3aQ==
+-----END CERTIFICATE-----",
+                "key" : "-----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCtN68pjmdv8MYP
+gYfcsMTJSBN6I20JekZujF2zvclR4WKMP+ex5gd5lIcbiR6j/z+w43G+4kggNX7Y
+Dp6bEfWJAC8m1omtTM1Wpxtd2OjS/lT6ZCuCpHxghadxM/+lKjuUEk1FgUKPzbAl
+789KW0ml5Lv2G6nYIzE7ClfwZDu4KjRwYSmHlw/obUFSqtTtP3AoiZbso3u/fpEf
+JRwYN0AHTHRe9zIUJuRTfYs6h7vy9BRAK839o76Cd3C94Oaw2MlDalNHAj5kJHJj
+H3cDgA4MLwCAjzezUcsLOQMii2v19jzRE16Kvkcxfhqwuz9/nFt6Kea7NsQNCCEk
+0o/QhnnrAgMBAAECggEARp3y/UAfD1XbiSrHlsNCFsUZm6uhokGFQUBcWxC+aHE4
+WfEbpj0fQwO4aRNnuHgxIQ44qxdZTDhC9BZRtuqFbUrz7iN8kXhEJlWOJJ5vnMUv
+I71+t44TXs5eSxpl2JH1JBKqCfH+jt3OOEkh+zBoQAeWUWlJvuHqCiXXYBuc9SEj
+siuRTOI/JCiqIRN7rftQJ7RUXvWV7QkDGm5SwrvZfZ1zy7OUviFN1iRE4pYypcPY
+DXEdwHShigh1MPpwyIxx1rrZw/hilpQuV1qBGovY3Pw1rJiSpbELq42N0r4hN6H7
+zTHKp95b0LPw6o1xP3cBv+z+cuk+hyrGOvkTeXOsMQKBgQDe199CqYpQKfCiwlYk
+yi8i3oRXt03xZmB907NKl0DT8tQ8VLQaIAriGQaSBaEsRRGVZ2sr1Bhq79iSDiOO
+U0KdEVvafa+lF9nwO7WL+HoQwPI9O3k7nXcTJTo+MoSRwJWXq0Z6j+ciah1LLff1
+3p+vcXtm7H2fGJXT0APzv3ynxwKBgQDG/Y/DBy2dDhKzvdPnmaKwBuMxfo6KzVUv
+6RriEdlZfzL4FOw5EfcQAxAsNezQ1Yw0rFI5K/SDSFNCeWWF3lTwDOlsvn56HELL
+yHi6Ej0gmoE+021WYSFIdY2xmWQLAAQS03XaZsuv6Xi/vB1WRI+VfTl8VwOjAYDV
+X2RJ1SSEvQKBgHpM/7sWUVKtseOhxKVsUXJRrVB2ydAy38Iu7beCS5IHM3PpCO9N
+pqtwEKsTa+FgBsZ4e9kSDlSiTbnbCKiUCXsqi77ePAffjzzJiFnJhTSssEXq3h5Z
+zYA0bkK0dw2HJJKY7ZVWZQP+ORWJpQzLodgn8BIMuOUYGSKmh4S/EysBAoGAEYNv
+i7KuCQycCMXESLX045k3lbuVwBGiVb0maI85me7gBYWR5NP38qjSW5HDbf3dgSVJ
+d06vDn7nFQqqLMYMo7P/N1rstsKV/ml+dqH0T1JJ3cWt8dRKoZ33ApKFg5JUyXNj
+A/3YH3tk7TsZOeZ+3KFQ1eiyoT4YoK7snLLtq+ECgYBmSscVIrdq/9D+2Ni66Rog
+jxrzGXdidkzE3nFMmp92x1HQRhXXpq6K6u+Y48Cyvd3GmKfeRd+NL19ueP+nAUwN
+rYoeWDV6+V5z1tvpFOZzVyk8THw4TZveORSvD9WDnDMzpfFSAYGYosM6q4yfUAi8
+IHWZ/EROq2afvEto9K0hVg==
+-----END PRIVATE KEY-----"
+            }
+        }
+    }
+}
+// "https" : false
+// "disableHostCheck" : true,
+// "proxy" : {
+//     "/api" : {
+//         "target" : "https://www.qkged.xyz",
+//         "changeOrigin" : true,
+//         "secure" : false
+//     }
+// }
+
